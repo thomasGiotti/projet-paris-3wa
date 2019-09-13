@@ -16,8 +16,8 @@ let app = {
       fetch(controllerInstance.url).then(response => response.text())
       .then(htmlContent =>{
         document.querySelector('main.container').innerHTML = htmlContent
+        controllerInstance.executeHttpRequest();
       });
-      controllerInstance.executeHttpRequest();
     }
   }
 }
